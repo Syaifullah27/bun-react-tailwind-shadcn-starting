@@ -4,6 +4,7 @@ import "@/public/styles/globals.css";
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
+import CounterComponent from "./components/shared/counterComponent";
 
 export function App() {
   return (
@@ -32,6 +33,8 @@ export function App() {
           <APITester />
         </CardContent>
       </Card>
+
+      <CounterComponent  />
     </div>
   );
 }
