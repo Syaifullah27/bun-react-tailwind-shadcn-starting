@@ -14,6 +14,7 @@ export function App() {
   const handleDecrement = () => {
     if (count > 0) setCount(count - 1);
   };
+  const handleReset = () => setCount(0);
 
   return (
     <div className="container mx-auto p-8 text-center relative z-10">
@@ -47,6 +48,13 @@ export function App() {
         onIncrement={handleIncrement}
         onDecrement={handleDecrement}
       />
+      <button
+        onClick={handleReset}
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        disabled={count === 0}
+      >
+        Reset Counter
+      </button>
     </div>
   );
 }
