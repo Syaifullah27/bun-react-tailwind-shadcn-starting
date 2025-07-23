@@ -1,72 +1,47 @@
-# Bun - React - Tailwind - Shadcn | Starting Template
+# Bun React Tailwind Shadcn Starter
 
-To install dependencies:
+## 📋 Deskripsi Aplikasi
 
-```bash
-bun install
-```
+Aplikasi ini adalah template starter modern menggunakan Bun, React, Tailwind CSS, dan Shadcn UI. Template ini menyediakan struktur siap pakai untuk membangun aplikasi web dengan stack terkini, serta beberapa fitur contoh seperti Counter interaktif.
 
-To start a development server:
+## ✨ Fitur Utama
 
-```bash
-bun dev
-```
+- **Counter Component**
+  - Komponen penghitung (Counter) dengan dua tombol (+) dan (–) untuk menambah/mengurangi nilai.
+  - Nilai counter tidak bisa kurang dari 0 (tombol kurang otomatis nonaktif jika 0).
+  - State counter dikelola di komponen utama (`App.tsx`) dan dikirim ke Counter sebagai props (Lifting State Up).
+  - Tersedia tombol **Reset Counter** untuk mengatur ulang nilai counter ke 0.
+- **Integrasi Tailwind CSS & Shadcn UI**
+  - Styling modern dan responsif.
+- **Struktur Proyek Modular**
+  - Komponen, utilitas, dan aset terorganisir dengan baik.
+- **Contoh Komponen API Tester**
+  - Untuk pengujian endpoint API (bisa dikembangkan lebih lanjut).
 
-To build the project:
+## 🚀 Cara Menjalankan Aplikasi
 
-```bash
-bun run build
-```
+1. **Install dependencies**
 
-To run for production:
+   ```bash
+   bun install
+   ```
 
-```bash
-bun start
-```
+2. **Jalankan server development**
 
-This project was created using `bun init` in bun v1.2.19. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+   ```bash
+   bun dev
+   ```
 
----
+   Akses aplikasi di browser pada alamat yang tertera di terminal (biasanya http://localhost:3000).
 
-## Project Structure
+3. **Build untuk produksi**
 
-```ts
-└── 📁src   // Main source directory
-    └── 📁components    // Reusable UI components
-        └── 📁shared    // Shared components
-        └── 📁ui    // Shadcn UI components 
-            ├── button.tsx  
-            ├── card.tsx
-            ├── form.tsx
-            ├── input.tsx
-            ├── label.tsx
-            ├── select.tsx
-    └── 📁hooks   // Custom hooks
-    └── 📁lib   // Library functions
-        ├── utils.ts    // Utility functions
-    └── 📁pages   // Page components
-    └── 📁public    // Public assets
-        └── 📁images    // Image assets
-            ├── logo.svg
-            ├── react.svg
-        └── 📁styles    // CSS Styles directory
-            ├── globals.css
-        ├── index.html    // Main HTML file
-    └── 📁routes    // Application routes
-    └── 📁stores    // Global state management (Zustand)
-    └── 📁types   // TypeScript type definitions
-    ├── APITester.tsx   // API testing component
-    ├── App.tsx   // Main application component
-    ├── index.ts    // Entry point for the application
-    ├── main.tsx    // Main entry file for the React application
-├── .env    // Environment variables
-├── .gitignore    // Git ignore file
-├── build.ts    // Build script
-├── bun-env.d.ts    // Type definitions for Bun environment
-├── bun.lock    // Bun lock file
-├── bunfig.toml   // Bun configuration file
-├── components.json   // Shadcn Components configuration
-├── package.json    // Project configuration
-├── README.md   // Project documentation
-└── tsconfig.json   // TypeScript configuration
-```
+   ```bash
+   bun run build
+   ```
+
+4. **Jalankan untuk produksi**
+
+   ```bash
+   bun start
+   ```
