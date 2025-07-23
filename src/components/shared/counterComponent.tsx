@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-const CounterComponent: React.FC = () => {
-    const [count, setCount] = useState(0);
+interface CounterComponentProps {
+    count: number;
+    onIncrement: () => void;
+    onDecrement: () => void;
+}
 
-    const handleIncrement = () => setCount(count + 1);
-    const handleDecrement = () => {
-        if (count > 0) setCount(count - 1);
-    };
-
+const CounterComponent: React.FC<CounterComponentProps> = ({ count, onIncrement, onDecrement }) => {
     return (
         <div className="flex items-center gap-4">
             <button
-                onClick={handleDecrement}
+                onClick={onDecrement}
                 disabled={count === 0}
                 className={`px-4 py-2 bg-red-500 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed`}
             >
@@ -19,7 +18,7 @@ const CounterComponent: React.FC = () => {
             </button>
             <span className="text-xl font-bold">{count}</span>
             <button
-                onClick={handleIncrement}
+                onClick={onIncrement}   
                 className="px-4 py-2 bg-green-500 text-white rounded"
             >
                 +
