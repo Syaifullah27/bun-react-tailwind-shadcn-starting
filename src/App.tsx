@@ -4,8 +4,18 @@ import "@/public/styles/globals.css";
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
+import CounterComponent from "./components/shared/counterComponent";
+import React, { useState } from "react";
 
 export function App() {
+  const [count, setCount] = useState(0);
+
+  const handleIncrement = () => setCount(count + 1);
+  const handleDecrement = () => {
+    if (count > 0) setCount(count - 1);
+  };
+  const handleReset = () => setCount(0);
+
   return (
     <div className="container mx-auto p-8 text-center relative z-10">
       <div className="flex justify-center items-center gap-8 mb-8">
@@ -32,6 +42,19 @@ export function App() {
           <APITester />
         </CardContent>
       </Card>
+
+      <CounterComponent
+        count={count}
+        onIncrement={handleIncrement}
+        onDecrement={handleDecrement}
+      />
+      <button
+        onClick={handleReset}
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        disabled={count === 0}
+      >
+        Reset Counter
+      </button>
     </div>
   );
 }
