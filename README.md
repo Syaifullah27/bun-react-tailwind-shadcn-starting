@@ -1,51 +1,42 @@
-# 🪪 Profile Card Component
 
-![image](/src/docs/images/ss.png "image")
+![image](/src/docs/images/skrinsut.png "image")
+# Bootcamp Registration Application
 
-Komponen Profile Card interaktif yang menampilkan informasi profil dengan tombol media sosial yang dapat diklik.
+## Fitur Utama
+1. **Profile Card Modern**
+   - Animasi Framer Motion
+   - Glowing effect pada avatar
+   - Social media icons dengan SVG
+   - Responsif di semua perangkat
 
-## 🚀 Teknologi Utama
+2. **Registration Form**
+   - Form pendaftaran lengkap dengan 8 field
+   - Conditional rendering untuk notes
+   - Toast notification dengan Sonner
+   - Tampilan data yang sudah disubmit
+   - Event handling untuk semua interaksi
+   - Responsif untuk mobile dan desktop
 
-- **React** + **TypeScript**
-- **Shadcn UI** untuk komponen UI
-- **Tailwind CSS** untuk styling
-- **Bun** sebagai runtime
+## Teknologi
+- React 18
+- TailwindCSS 3
+- Framer Motion (animasi)
+- Sonner (toast notifications)
+- TypeScript
+- Bun (package manager)
 
-## 📁 Struktur File Penting
-
+## Struktur Proyek
 src/
 ├── components/
-│ ├── shared/ # Komponen shared
+│ ├── shared/ # Komponen utama aplikasi
 │ └── ui/ # Komponen UI kustom
-├── data/ # Data aplikasi
+├── data/ # Data statis aplikasi
+├── hooks/ # Custom hooks
 ├── interfaces/ # TypeScript interfaces
 ├── lib/ # Utilities
 └── public/ # Aset statis
 
-## ⚙️ Instalasi
-
+## Cara Menjalankan
 ```bash
-# Clone repositori
-git clone https://github.com/username/project.git
-cd project
-
-# Instal dependensi
 bun install
-
-# Jalankan aplikasi
 bun run dev
-
-```
-
-
-## Cara Penggunaan
-```tsx
-<ProfileCard
-  name="Nama Anda"
-  description="Deskripsi Profesi"
-  image="/path/to/image.png"
-  socialMedia={[
-    { name: 'GitHub', url: 'https://github.com' },
-    { name: 'LinkedIn', url: 'https://linkedin.com' }
-  ]}
-/>
