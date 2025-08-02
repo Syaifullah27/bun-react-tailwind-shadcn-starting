@@ -1,5 +1,6 @@
 
 ![image](/src/docs/images/skrinsut.png "image")
+![image](/src/docs/images/ss.png "image")
 # Bootcamp Registration Application
 
 ## Fitur Utama
