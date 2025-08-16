@@ -1,51 +1,34 @@
-# 🪪 Profile Card Component
+# Tugas 9: Advanced React Hooks & State Management
 
-![image](/src/docs/images/ss.png "image")
+![image](/src/docs/images/skrinsut.png "image")
+## Fitur Utama
 
-Komponen Profile Card interaktif yang menampilkan informasi profil dengan tombol media sosial yang dapat diklik.
+1. **Fetch Data Karakter Dragon Ball**
+   - Menggunakan `useEffect` untuk fetch data dari API
+   - Menampilkan karakter dengan nama, gambar, dan detail
+   - Loading skeleton saat data sedang di-fetch
+   - Error handling dengan tampilan user-friendly
 
-## 🚀 Teknologi Utama
+2. **Pencarian dengan Optimisasi `useMemo`**
+   - Input pencarian untuk memfilter karakter berdasarkan nama
+   - Menggunakan `useMemo` untuk optimasi performa pencarian
 
-- **React** + **TypeScript**
-- **Shadcn UI** untuk komponen UI
-- **Tailwind CSS** untuk styling
-- **Bun** sebagai runtime
+3. **Dark Mode dengan `useContext`**
+   - Tema global menggunakan React Context
+   - Tombol toggle tema (light/dark)
+   - Menyimpan preferensi tema di local storage
+   - Mendeteksi preferensi tema sistem
 
-## 📁 Struktur File Penting
+4. **Global State Management dengan Zustand**
+   - Counter sederhana menggunakan Zustand
+   - State global terpisah dari komponen
 
-src/
-├── components/
-│ ├── shared/ # Komponen shared
-│ └── ui/ # Komponen UI kustom
-├── data/ # Data aplikasi
-├── interfaces/ # TypeScript interfaces
-├── lib/ # Utilities
-└── public/ # Aset statis
+## Teknologi
 
-## ⚙️ Instalasi
-
-```bash
-# Clone repositori
-git clone https://github.com/username/project.git
-cd project
-
-# Instal dependensi
-bun install
-
-# Jalankan aplikasi
-bun run dev
-
-```
-
-
-## Cara Penggunaan
-```tsx
-<ProfileCard
-  name="Nama Anda"
-  description="Deskripsi Profesi"
-  image="/path/to/image.png"
-  socialMedia={[
-    { name: 'GitHub', url: 'https://github.com' },
-    { name: 'LinkedIn', url: 'https://linkedin.com' }
-  ]}
-/>
+- React 18
+- TailwindCSS 3
+- Zustand (state management)
+- Framer Motion (animasi)
+- Lucide React (ikon)
+- Sonner (toast notifications)
+- Dragon Ball API (https://dragonball-api.com)
