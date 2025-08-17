@@ -2,7 +2,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "@/components/shared/Navabar";
-import Profilepage from "./pages/Profilepage";
+import Profilepage from "./pages/ProfilePage";
 import DragonBallCharacterPage from "./pages/DragonBallCharacterPage";
 
 
