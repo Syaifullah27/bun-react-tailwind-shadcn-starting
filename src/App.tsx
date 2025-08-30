@@ -1,18 +1,21 @@
-import "@/public/styles/globals.css";
-import { ProfileCard } from "./components/shared";
-import { profileData } from "./data";
+// src/App.tsx
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "@/components/shared/Navabar";
+import Profilepage from "./pages/ProfilePage";
+import DragonBallCharacterPage from "./pages/DragonBallCharacterPage";
 
-export function App() {
+
+export const App: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 p-4">
-      <ProfileCard
-        name={profileData.name}
-        description={profileData.description}
-        image={profileData.image}
-        socialMedia={profileData.socialMedia}
-      />
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <main className="">
+        <Routes>
+          <Route path="/" element={<Profilepage />} />
+          <Route path="/dragonball" element={<DragonBallCharacterPage />} />
+        </Routes>
+      </main>
     </div>
   );
-}
-
-export default App;
+};
